@@ -45,12 +45,10 @@ DataSense AI provides a complete pipeline that:
 
 ## 📸 Demo
 
-> Add screenshots of your Streamlit app here
+>Screenshots of your Streamlit app here
 
-```
-Create a folder named "images" and add screenshots like:
 images/demo.png
-```
+
 
 ---
 
