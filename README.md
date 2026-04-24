@@ -1,61 +1,175 @@
-# DataSense AI
+# DataSense AI 🚀
 
-DataSense AI is a customer churn analysis app built around the Telco churn dataset in [data/raw/churn.csv](D:\Projects\DataSense-AI\data\raw\churn.csv). The project trains multiple machine learning models, compares them, saves the best pipeline, exports processed datasets, and serves predictions in a Streamlit interface.
+End-to-end Machine Learning system for **Customer Churn Prediction** with an interactive dashboard built using Streamlit.
 
-## What the system does
+---
 
-- Loads and cleans the churn dataset
-- Removes obvious target leakage columns before training
-- Builds preprocessing for numeric and categorical features
-- Trains Logistic Regression, Random Forest, and optionally XGBoost
-- Selects the best model using ROC-AUC
-- Saves the best model to `models/trained_model.pkl`
-- Exports processed training files to `data/processed/`
-- Provides a Streamlit UI for training and single-customer prediction
+## 🎯 Problem
 
-## Project structure
+Businesses often struggle to identify customers who are likely to leave (churn).
+Losing customers directly impacts revenue and growth.
 
-- [app/app.py](D:\Projects\DataSense-AI\app\app.py): Streamlit dashboard
-- [src/data_preprocessing.py](D:\Projects\DataSense-AI\src\data_preprocessing.py): dataset loading, split, preprocessing, processed data export
-- [src/feature_engineering.py](D:\Projects\DataSense-AI\src\feature_engineering.py): leakage removal, feature selection, data summary
-- [src/model_training.py](D:\Projects\DataSense-AI\src\model_training.py): model training and best-model selection
-- [src/model_evaluation.py](D:\Projects\DataSense-AI\src\model_evaluation.py): evaluation metrics
-- [src/predict.py](D:\Projects\DataSense-AI\src\predict.py): inference helpers
-- [test.py](D:\Projects\DataSense-AI\test.py): CLI pipeline run
-- [config.yaml](D:\Projects\DataSense-AI\config.yaml): paths and training config
+---
 
-## How to run
+## 💡 Solution
 
-Your machine currently has a broken Python setup, so `streamlit` is not available in PowerShell yet. Once Python 3.11+ is installed correctly and visible on PATH, run:
+DataSense AI provides a complete pipeline that:
 
-```powershell
-cd D:\Projects\DataSense-AI
+* Cleans and preprocesses raw customer data
+* Applies feature engineering for better insights
+* Trains multiple machine learning models
+* Selects the best model using ROC-AUC
+* Provides real-time churn prediction through an interactive UI
+
+---
+
+## 🧠 Features
+
+* ✅ End-to-end ML pipeline (data → model → prediction)
+* ✅ Automated preprocessing (handles numeric + categorical data)
+* ✅ Feature engineering (tenure groups, spending behavior, etc.)
+* ✅ Multiple model training (Logistic Regression, Random Forest, XGBoost)
+* ✅ Model selection using ROC-AUC
+* ✅ Interactive Streamlit dashboard
+* ✅ Real-time prediction system
+
+---
+
+## 📊 Results
+
+* Best Model: Random Forest *(example — update after your run)*
+* ROC-AUC: 0.84 *(replace with your score)*
+* Accuracy: 0.80 *(replace with your score)*
+
+---
+
+## 📸 Demo
+
+> Add screenshots of your Streamlit app here
+
+```
+Create a folder named "images" and add screenshots like:
+images/demo.png
+```
+
+---
+
+## 🏗️ Project Structure
+
+```
+DataSense-AI/
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│
+├── notebooks/
+│   ├── eda.ipynb
+│   ├── experimentation.ipynb
+│
+├── src/
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   ├── model_training.py
+│   ├── model_evaluation.py
+│   ├── predict.py
+│
+├── app/
+│   └── app.py
+│
+├── utils/
+│   └── helper.py
+│
+├── models/
+├── config.yaml
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```
+git clone https://github.com/Arshpreetxsingh/DataSense-AI.git
+cd DataSense-AI
+```
+
+Create virtual environment:
+
+```
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install --no-cache-dir -r requirements.txt
-.\train_pipeline.ps1
-.\run_app.ps1
+.\.venv\Scripts\activate
 ```
 
-If PowerShell blocks activation, run:
+Install dependencies:
 
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
+```
+pip install -r requirements.txt
 ```
 
-## Expected outputs
+---
 
-After training succeeds, you should see:
+## 🚀 Run the Project
 
-- `models/trained_model.pkl`
-- `data/processed/cleaned_churn.csv`
-- `data/processed/train_features.csv`
-- `data/processed/test_features.csv`
-- `data/processed/training_summary.json`
+### 1. Train the model
 
-## Notes
+```
+python test.py
+```
 
-- `models/trained_model.pkl` in the repo is currently an empty placeholder and will be overwritten by training.
-- The app now guards against invalid or empty model files and asks you to train first instead of crashing.
-- `xgboost`, `matplotlib`, and `seaborn` are optional and can be installed later if you want notebook visuals or extra experimentation.
+### 2. Run the Streamlit app
+
+```
+streamlit run app/app.py
+```
+
+---
+
+## 🔍 How It Works
+
+1. Raw dataset is loaded and cleaned
+2. Feature engineering is applied
+3. Data is split into training and testing sets
+4. Multiple models are trained
+5. Best model is selected based on ROC-AUC
+6. Model is saved and used for prediction
+7. User interacts with the app to get predictions
+
+---
+
+## 🧠 Key Learnings
+
+* Built a production-style ML pipeline
+* Handled real-world data preprocessing challenges
+* Designed modular and scalable architecture
+* Integrated ML models into a user-facing application
+* Implemented model evaluation and selection
+
+---
+
+## 🔮 Future Improvements
+
+* Add explainability (Why a customer churns)
+* Deploy the app online
+* Add support for multiple datasets
+* Improve UI/UX
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* pandas, numpy
+* scikit-learn, XGBoost
+* Streamlit
+
+---
+
+## 👤 Author
+
+**Arshpreet Singh**
+
+GitHub: https://github.com/Arshpreetxsingh
