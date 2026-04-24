@@ -47,7 +47,9 @@ DataSense AI provides a complete pipeline that:
 
 >Screenshots of your Streamlit app here
 
-images/demo.png
+<img width="1902" height="849" alt="Screenshot 2026-04-24 222615" src="https://github.com/user-attachments/assets/217d3d07-90af-4f29-94b9-68e14c853c18" />
+<img width="1902" height="799" alt="demo" src="https://github.com/user-attachments/assets/c97eb042-b664-4d41-8906-c00914c784db" />
+
 
 
 ---
